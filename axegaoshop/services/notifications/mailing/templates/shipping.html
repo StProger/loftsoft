@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arial:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>HTML Template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body style="margin: 0; padding: 0; font-family: 'Roboto', Arial, sans-serif; background-color: #ffffff; line-height: 1; text-align: center; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+    <table align="center" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="border-collapse: collapse; width: 100%; max-width: 800px; margin: 0 auto;">
+        <tr height="81"></tr>
+    <tr>
+        <td align="center">
+            <img src="http://fileshare.su:8000/api/uploads/8kVuZtnLncLlam2T.jpg" alt="Не удалось загрузить изображение" style="display: block; margin: 0 auto;">
+        </td>
+    </tr>
+    <tr height="30"></tr>
+        <tr>
+            <td style="font-size: 48px; font-weight: 400; color: #000; padding: 30px 0;">Пожалуйста, подождите. <br>
+                Мы отправляем ваш товар:</td>
+        </tr>
+
+        {% for param in parameters %}
+        <tr>
+            <td>
+                <div style="width: 100%; max-width: 800px; margin: 0 auto 30px; padding: 20px; border-radius: 10px; background-color: #F5F5F5; text-align: left;">
+                    <img width="122px" src="{{ param.photo }}" alt="Не удалось загрузить изображение" style="margin-right: 20px;" />
+                    <div style="font-size: 24px; font-weight: 400; color: #000;">{{ param.title }}</div>
+                    <div style="font-size: 18px; font-weight: 400; color: #000;">Кол-во: {{ param.count }}</div>
+                </div>
+            </td>
+        </tr>
+        {% endfor %}
+
+        <tr>
+            <td>
+                <hr style="width: 100%; border: none; border-top: 1px solid #ccc; margin: 10px 0;">
+                <div style="display: flex; justify-content: space-between; font-size: 24px; color: #000; font-family: 'Roboto', Arial, sans-serif; padding-top: 20px;">
+                    <span>Итого: {{ total_sum }}</span>
+                    <span style="margin-left: auto;">{{ total_count }} Товаров</span>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+
+    <table width="100%" cellpadding="0" cellspacing="0" style="font-family: Arial, sans-serif; border-collapse: collapse;">
+        <tbody>
+            <tr height="54px"></tr>
+            <tr align="center" bgcolor="#2667FF">
+                <td style="color: #ffffff; font-size: 24px; font-family: Arial; line-height: 1; padding-top: 31px; padding-bottom: 24px; border-collapse: collapse;">
+                    C уважением,<br>
+                    “ООО Лофт-Софт”
+                </td>
+            </tr>
+            <tr>
+                <td style="border-collapse: collapse;">
+                    <table bgcolor="#2667FF" width="100%" cellpadding="0" cellspacing="0" align="center" class="features" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                        <tr class="features">
+                            <td align="center" valign="top" style="border-collapse: collapse; width: 100px; color: #ffffff; border: 2px solid white; border-radius: 100%; border-style: solid; border-spacing: 2px;">
+                                <img src="http://fileshare.su:8000/api/uploads/aeiahHVxysk5XsV4.png" alt="Не удалось загрузить изображение"><br>
+                                широкий ассортимент
+                            </td>
+                            <td align="center" valign="top" style="border-collapse: collapse; width: 100px; color: #ffffff; border: 2px solid white; border-radius: 100%; border-style: solid; border-spacing: 2px;">
+                                <img src="http://fileshare.su:8000/api/uploads/KaxzydBygFfcVTUf.png" alt="Не удалось загрузить изображение"><br>
+                                поддержка 24/7
+                            </td>
+                            <td align="center" valign="top" style="border-collapse: collapse; width: 100px; color: #ffffff; border: 2px solid white; border-radius: 100%; border-style: solid; border-spacing: 2px;">
+                                <img src="http://fileshare.su:8000/api/uploads/ELETKZCKhcY959zp.png" alt="Не удалось загрузить изображение"><br>
+                                моментальная выдача товара
+                            </td>
+                        </tr>
+                        <tr height="47px"></tr>
+                    </table>
+                </td>
+            </tr>
+            <tr align="center" bgcolor="#2667FF" style="color: #ffffff; font-family: Arial; font-size: 24px; font-weight: 400; line-height: normal;">
+                <td style="border-collapse: collapse;">Данное письмо не является офертой. Все цены действительны на момент покупки.</td>
+            </tr>
+            <tr bgcolor="#2667FF" height="25px"><td style="border-collapse: collapse;"></td></tr>
+            <tr align="center">
+                <td align="left" class="footer" bgcolor="#2E3444" style="padding-top: 32px; padding-right: 70px; padding-bottom: 32px; padding-left: 70px; color: #FFF; font-family: Arial; font-size: 24px; font-weight: 400; display: flex; align-items: center; justify-content: space-between; border-collapse: collapse;">
+                    2023 - 2024 ©
+                    <span style="margin-left: auto;">All rights reserved</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+version: '3.9'
+
+services:
+
+  web:
+    image: axegaoshop:latest
+    container_name: axegaoshop_api
+    command: python -m axegaoshop
+    volumes:
+      - ./axegaoshop/data/storage/uploads:/code/axegaoshop/data/storage/uploads
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_started
+      redis:
+        condition: service_started
+
+  db:
+    image: postgres:alpine
+    container_name: axegaoshop_db
+    ports:
+      - "127.0.0.1:5433:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=axegaoshopdb
+
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  redis:
+    image: redis:6-alpine
+    container_name: axegaoshop_redis
+    restart: always
+    volumes:
+      - redis-data:/data
+    ports:
+      - "127.0.0.1:6380:6379"
+
+
+volumes:
+  pgdata:
+
+  redis-data:

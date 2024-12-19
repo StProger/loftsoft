@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Письмо с поздравлением</title>
+<style>
+  @media only screen and (max-width: 600px) {
+    .container {
+      width: 100% !important;
+    }
+    .logo img {
+      width: 100px !important;
+    }
+
+    .feature {
+        width: 150px !important;
+        height: 150px !important;
+        padding: 10px !important;
+    }
+
+    .feature img {
+        width: 60px !important;
+    }
+  }
+</style>
+</head>
+<body style="margin: 0; padding: 0; font-family: Arial, sans-serif;">
+  <table role="presentation" class="container" width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td align="center" style="padding: 20px 0;">
+        <div class="logo">
+          <a href="http://fileshare.su:8000/api/uploads/8kVuZtnLncLlam2T.jpg" target="_blank">
+            <img src="http://fileshare.su:8000/api/uploads/8kVuZtnLncLlam2T.jpg" alt="Логотип" width="200px" style="display: block;" />
+          </a>
+        </div>
+        <h1 style="color: #000000; font-size: 32px; text-align: center; font-weight: 400; margin-bottom: 0px;">Поздравляем <br> с покупкой товаров!</h1>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: #ffffff; padding: 20px; text-align: center;">
+        <ul style="list-style-type: none; color: #000000; padding: 0px;">
+          {% for param in parameters %}
+              {{ param.title }}:
+            <li style="color: #000000; background-color:#F0F0F0; border-radius: 100px; background: #F0F0F0; padding: 10px 40px; width: max-content; margin: 0px auto 8px;">{{ param.key }}</li>
+          {% endfor %}
+        </ul>
+        <p style="color: #000000;">Инструкцию по установке вы можете найти в чате поддержки: <br> <a href="https://www.loftsoft.ru" style="color: #2667FF; text-decoration: none;" target="_blank">https://www.loftsoft.ru</a> - Кнопка “Чат”</p>
+
+      </td>
+    </tr>
+    <tr style="background-color: #2667FF;">
+      <td style="display: flex; align-items: center;text-align: center; padding: 20px;">
+        <div style="display: inline-block; padding: 40px; box-sizing: border-box; width: 200px;height: 200px;margin: 0 auto;border-radius: 200px; border: 1px solid #ffffff;" class="feature">
+          <img src="http://fileshare.su:8000/api/uploads/aeiahHVxysk5XsV4.png" alt="Фича 1" style="display: block; margin: 0 auto;width: 80px;">
+          <p style="color: #ffffff;">Широкий ассортимент</p>
+        </div>
+        <div style="display: inline-block; padding: 40px; box-sizing: border-box; width: 200px;height: 200px;margin: 0 auto;border-radius: 200px; border: 1px solid #ffffff;" class="feature">
+          <img src="http://fileshare.su:8000/api/uploads/aeiahHVxysk5XsV4.png" alt="Фича 2" style="display: block; margin: 0 auto; width: 80px;">
+          <p style="color: #ffffff;">Поддержка 24/7</p>
+        </div>
+        <div style="display: inline-block; padding: 40px; box-sizing: border-box; width: 200px;height: 200px;margin: 0 auto;border-radius: 200px; border: 1px solid #ffffff;" class="feature">
+          <img src="http://fileshare.su:8000/api/uploads/aeiahHVxysk5XsV4.png" alt="Фича 3" style="display: block; margin: 0 auto; width: 80px;">
+          <p style="color: #ffffff;">Моментальная выдача товара</p>
+        </div>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

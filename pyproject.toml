@@ -1,0 +1,7 @@
+[tool.aerich]
+tortoise_orm = "axegaoshop.db.config.TORTOISE_CONFIG"
+location = "axegaoshop/db/migrations"
+src_folder = "./."
+
+[tool.black]
+target_version = ['py311']

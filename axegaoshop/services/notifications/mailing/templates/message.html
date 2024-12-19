@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Письмо с поздравлением</title>
+<style>
+  @media only screen and (max-width: 600px) {
+    .container {
+      width: 100% !important;
+    }
+    .logo img {
+      width: 100px !important;
+    }
+
+    .feature {
+        width: 150px !important;
+        height: 150px !important;
+        padding: 10px !important;
+    }
+
+    .feature img {
+        width: 60px !important;
+    }
+  }
+</style>
+</head>
+<body style="margin: -200px 0 0; padding: 0; font-family: Arial, sans-serif;">  <table role="presentation" class="container" width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+    <td align="center" style="padding: 20px 0;">
+      <div class="logo">
+        <a href="http://fileshare.su:8000/api/uploads/8kVuZtnLncLlam2T.jpg" target="_blank">
+          <img src="http://fileshare.su:8000/api/uploads/8kVuZtnLncLlam2T.jpg" alt="Логотип" width="200px" style="display: block;" />
+        </a>
+      </div>
+      <h1 style="color: #000000; font-size: 32px; text-align: center;">У вас новое сообщение <br>от поддержки!</h1>
+    </td>
+  </tr>
+        <tr height="20"></tr>
+        <tr align="center">
+            <td style="font-size: 32px; color: #606060; font-weight: 400;">Сообщение от поддержки:</td>
+        </tr>
+        <tr>
+            <td align="center" style="display: block;color: #000; font-size: 24px; font-weight: 400; padding: 20px; border: 2px solid #B1B1B1; border-radius: 25px; max-width: 600px; margin: 30px auto;">
+                {{ content }}
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <button style="padding: 15px 40px; border-radius: 25px; margin-bottom: 40px; background-color: #2667FF; border: none; color: #ffffff; font-size: 24px;">Перейти к сообщениям</button>
+            </td>
+        </tr>
+
+
+    <tr style="background-color: #2667FF;">
+        <td style="display: flex; align-items: center;text-align: center; padding: 20px;">
+          <div style="display: inline-block; padding: 40px; box-sizing: border-box; width: 200px;height: 200px;margin: 0 auto;border-radius: 200px; border: 1px solid #ffffff;" class="feature">
+            <img src="http://fileshare.su:8000/api/uploads/aeiahHVxysk5XsV4.png" alt="Фича 1" style="display: block; margin: 0 auto;width: 80px;">
+            <p style="color: #ffffff;">Широкий ассортимент</p>
+          </div>
+          <div style="display: inline-block; padding: 40px; box-sizing: border-box; width: 200px;height: 200px;margin: 0 auto;border-radius: 200px; border: 1px solid #ffffff;" class="feature">
+            <img src="http://fileshare.su:8000/api/uploads/aeiahHVxysk5XsV4.png" alt="Фича 2" style="display: block; margin: 0 auto; width: 80px;">
+            <p style="color: #ffffff;">Поддержка 24/7</p>
+          </div>
+          <div style="display: inline-block; padding: 40px; box-sizing: border-box; width: 200px;height: 200px;margin: 0 auto;border-radius: 200px; border: 1px solid #ffffff;" class="feature">
+            <img src="http://fileshare.su:8000/api/uploads/aeiahHVxysk5XsV4.png" alt="Фича 3" style="display: block; margin: 0 auto; width: 80px;">
+            <p style="color: #ffffff;">Моментальная выдача товара</p>
+          </div>
+        </td>
+      </tr>
+    </table>
+</body>
+
+</html>

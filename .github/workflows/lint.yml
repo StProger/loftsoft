@@ -1,0 +1,14 @@
+name: Lint
+
+on: [workflow_call, push]
+
+
+
+jobs:
+  black:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: psf/black@24.3.0
+        with:
+          src: "./axegaoshop"
